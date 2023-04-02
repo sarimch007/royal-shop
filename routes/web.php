@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NotificationController;
+use App\Http\Livewire\NotificationDemo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/send-notification', [NotificationController::class, 'sendOfferNotification']);
+Route::get('notification', NotificationDemo::class);
+
 
 
